@@ -29,7 +29,7 @@ There are different storage accounts, see this [link](https://learn.microsoft.co
 
 ***The name of the storage account must be unique within Azure. No two storage accounts can have the same name.**
 
-## Storage the tf.state remotely
+## Store the tf.state remotely
 
 When working with CI/CD pipelines, you need a place to persist the tf.state. To do so, you first need to **manually create the following resources:**
 
@@ -73,3 +73,15 @@ Then, you can normally set
         terraform apply
 
 To start saving the tf.state in the storage container in Azure
+
+## Deployment of an Azure Function
+
+To deploy the Azure function using Terraform, you need to previously create an azure resource group, a storage account, and a storage container.
+
+Then, it is needed to zip the whole content of the folder that contains the Azure Function, and store it in a blob storage.
+
+Once the Azure Function was packaged and stored in a blob storage, it is needed to create a service plan, and a function app using terraform.
+
+* To deploy the azure function with a secret stored as a environment variable, you can pass it this way:
+
+        terraform apply -var "OPENAI_API_KEY=your_api_key"
