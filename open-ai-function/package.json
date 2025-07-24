@@ -1,0 +1,23 @@
+{
+  "name": "azureexamples",
+  "version": "1.0.0",
+  "description": "This repo is to tests how to deploy services in Microsoft Azure",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmmanuelMald/AzureExamples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmmanuelMald/AzureExamples/issues"
+  },
+  "homepage": "https://github.com/EmmanuelMald/AzureExamples#readme",
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "openai": "^5.10.2"
+  }
+}

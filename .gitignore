@@ -181,3 +181,10 @@ cython_debug/
 *.tfstate
 *.tfstate.backup
 .terraform.*
+
+# NodeJS files
+node_modules/
+
+# Local settings for Azure Functions
+# This file is used to store local settings for Azure Functions, such as connection strings and secrets.
+local.settings.json
