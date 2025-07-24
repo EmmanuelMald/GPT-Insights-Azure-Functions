@@ -1,0 +1,16 @@
+# Azure Functions File Structure Explanation
+
+This folder contains all the necessary for the Azure Function to execute the code. Azure Functions uses a specific folder and file structure to understand how to run your function app. Here's a quick breakdown of the key files:
+
+| File                            | Purpose                                                                                                                        |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| **`host.json`**                 | Global configuration file for all functions in the app (e.g. logging, extension settings). Nevertheless, in this case, only the version is specified.                                     |
+| **`HttpTrigger/function.json`** | Declares the bindings and triggers for the `HttpTrigger` function (e.g. HTTP method, route, auth level).                       |
+| **`HttpTrigger/index.js`**      | The main function code for the HTTP trigger. This file exports a function that Azure will execute when the endpoint is called. |
+
+
+These files are required for Azure to properly load, bind, and execute the function when hosted locally or deployed to the cloud.
+
+The logic of the function was splitted: *services/* contains the real logic of what the function should do, whereas *HttpTrigger/index.js* contains the parameters required by the logic in *services/*.
+
+When installing the NodeJS dependencies, the folder *node_modules* will be created (but not commited).
