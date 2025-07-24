@@ -15,6 +15,11 @@ Some events that triggers the Azure function are:
 
 For this case, we will be using an HTTP request.
 
+## Repository Structure
+
+- *open-ai-function/* -> Contains the whole logic that the Azure Function will execute
+
+- *terraform/* -> Contains all the code related to the necessary infrastructure in Microsoft Azure
 
 ## Requirements to run this repo
 
@@ -46,7 +51,19 @@ Or, you can execute:
     cd open-ai-function
     npm install
 
-Having these 4 requirements, you will be ready to test the Azure Function locally.
+### 5. Generate a valid API KEY in OpenAI
+
+If you have a free account, even if you generate an API KEY, you will need to add some credits to use the API. I recommend add 5 USD. Nevertheless, the calls to the API costs a lot less than that.
+
+You can create the API KEY [here](https://platform.openai.com/account/api-keys).
+
+After generating the API KEY, create a .env file in the open-ai-functions folder, and write the environment variable:
+
+    OPENAI_API_KEY="your_api_key"
+
+*.env files are not (and should not) commited in this repository.*
+
+Having these 5 requirements, you will be ready to test the Azure Function locally.
 
 ## How to Start Azure Functions locally
 
