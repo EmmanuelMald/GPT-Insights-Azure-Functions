@@ -1,5 +1,5 @@
 require("dotenv").config(); // to load environment variables from .env file
-const {OpenAI} = require("openai"); // Import OpenAI SDK
+const {OpenAI} = require("openai/index.js"); // Import OpenAI SDK
 
 const openai = new OpenAI({apiKey: process.env.OPENAI_API_KEY}); // Initialize OpenAI with API key
 
