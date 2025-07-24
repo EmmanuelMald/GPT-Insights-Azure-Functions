@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/EmmanuelMald/AzureExamples/issues"
   },
-  "homepage": "https://github.com/EmmanuelMald/AzureExamples#readme"
+  "homepage": "https://github.com/EmmanuelMald/AzureExamples#readme",
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "openai": "^5.10.2"
+  }
 }
