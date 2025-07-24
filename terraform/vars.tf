@@ -34,3 +34,25 @@ variable "storage_container_gpt_insight_name" {
   description = "Name of the storage container for the GPT Insight Azure Function App."
   default     = "gpt-insight-container"
 }
+
+variable "gpt_insight_service_plan_name" {
+  type        = string
+  description = "Name of the service plan for the GPT Insight Azure Function App."
+  default     = "gpt-insight-service-plan"
+}
+
+
+variable "azure_function_app_name" {
+  type        = string
+  description = "Name of the Azure Function App."
+  default     = "gpt-insight-function-app"
+}
+
+
+
+variable "OPENAI_API_KEY" {
+  type        = string
+  description = "API key for OpenAI services."
+  sensitive   = true
+  default     = "your-openai-api-key"
+}
