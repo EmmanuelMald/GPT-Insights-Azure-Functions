@@ -79,3 +79,9 @@ To start saving the tf.state in the storage container in Azure
 To deploy the Azure function using Terraform, you need to previously create an azure resource group, a storage account, and a storage container.
 
 Then, it is needed to zip the whole content of the folder that contains the Azure Function, and store it in a blob storage.
+
+Once the Azure Function was packaged and stored in a blob storage, it is needed to create a service plan, and a function app using terraform.
+
+* To deploy the azure function with a secret stored as a environment variable, you can pass it this way:
+
+        terraform apply -var "OPENAI_API_KEY=your_api_key"

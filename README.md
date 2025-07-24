@@ -25,7 +25,7 @@ For this case, we will be using an HTTP request.
 
 ### 1. NodeJS
 
-To install NodeJS for Windows using Chocolately with npm, please, follow the instructions [here](https://nodejs.org/en/download) ((There are also instructions to install chocolately - Is a free and open-source package manager for Windows)
+To install NodeJS for Windows using Chocolately with npm, please, follow the instructions [here](https://nodejs.org/en/download) (There are also instructions to install chocolately - Is a free and open-source package manager for Windows)
 
 
 ### 2. Azure Functions Core Tools
@@ -44,12 +44,12 @@ Make is a build automation tool, it reads instructions from a file called Makefi
 
 After installing make, you can open a terminal in the base of this repository, and write the command:
 
-    make install-nodejs-dependencies
+        make install-nodejs-dependencies
 
 Or, you can execute:
 
-    cd open-ai-function
-    npm install
+        cd open-ai-function
+        npm install
 
 ### 5. Generate a valid API KEY in OpenAI
 
@@ -59,7 +59,7 @@ You can create the API KEY [here](https://platform.openai.com/account/api-keys).
 
 After generating the API KEY, create a .env file in the open-ai-functions folder, and write the environment variable:
 
-    OPENAI_API_KEY="your_api_key"
+        OPENAI_API_KEY="your_api_key"
 
 *.env files are not (and should not) commited in this repository.*
 
@@ -69,8 +69,12 @@ Having these 5 requirements, you will be ready to test the Azure Function locall
 
 Open a terminal in the root of this repository and write the command:
 
-    make start-azure-function
+        make start-azure-function
 
 Then, you can test the azure function writing the command:
 
-    make trigger-azure-function
+        make trigger-azure-function
+
+## Azure Function - Deployment 
+
+To deploy the Azure Function, please check this [doc](/terraform/README.md)
