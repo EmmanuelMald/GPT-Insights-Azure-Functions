@@ -28,3 +28,9 @@ variable "main_filesystem_name" {
   description = "Name of the main filesystem in the storage account."
   default     = "eamadormfilesystem"
 }
+
+variable "storage_container_gpt_insight_name" {
+  type        = string
+  description = "Name of the storage container for the GPT Insight Azure Function App."
+  default     = "gpt-insight-container"
+}

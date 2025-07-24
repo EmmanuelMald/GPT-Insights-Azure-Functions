@@ -26,3 +26,10 @@ resource "azurerm_storage_data_lake_gen2_filesystem" "main_filesystem" {
   storage_account_id = azurerm_storage_account.main_storage_account.id
 
 }
+
+## Creation of a storage container for the Azure Function
+resource "azurerm_storage_container" "gpt_insight_app_container" {
+  name                  = var.storage_container_gpt_insight_name
+  storage_account_id    = azurerm_storage_account.main_storage_account.id
+  container_access_type = "private"
+}
