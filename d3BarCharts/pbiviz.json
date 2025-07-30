@@ -1,1 +1,25 @@
-{"visual":{"name":"d3BarCharts","displayName":"D3BarCharts","guid":"d3BarCharts78C4D72A0A404C76A238443BE69FBDB0","visualClassName":"Visual","version":"1.0.0.0","description":"","supportUrl":"","gitHubUrl":""},"apiVersion":"5.3.0","author":{"name":"","email":""},"assets":{"icon":"assets/icon.png"},"externalJS":null,"style":"style/visual.less","capabilities":"capabilities.json","dependencies":null,"stringResources":[],"version":"1.0.0.0"}
+{"visual":{
+    "name":"d3BarCharts",
+    "displayName":"D3BarCharts",
+    "guid":"d3BarCharts78C4D72A0A404C76A238443BE69FBDB0",
+    "visualClassName":"Visual",
+    "version":"1.0.0.0",
+    "description":"Graph that shows the percentage of each brand in a bar chart.",
+    "supportUrl":"arena-analytics.com",
+    "gitHubUrl":""
+  },
+  "apiVersion":"5.3.0",
+  "author":{
+    "name":"Emmanuel Amador",
+    "email":"emmanuel.amador@arena-analytics.com"
+  },
+  "assets":{
+    "icon":"assets/icon.png"
+  },
+  "externalJS":null,
+  "style":"style/visual.less",
+  "capabilities":"capabilities.json",
+  "dependencies":null,
+  "stringResources":[],
+  "version":"1.0.0.0"
+}

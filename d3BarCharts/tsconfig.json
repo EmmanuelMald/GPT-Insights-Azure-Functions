@@ -11,9 +11,15 @@
         "lib": [
             "es2022",
             "dom"
+        ],
+        "typeRoots": [
+            "./node_modules/@types"
         ]
     },
-    "files": [
+    "include": [
+        "src/**/*"
+    ],
+    "files": [ 
         "./src/visual.ts"
     ]
 }

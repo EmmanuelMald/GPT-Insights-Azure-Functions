@@ -1,79 +1,91 @@
 {
     "dataRoles": [
         {
-            "displayName": "Category Data",
-            "name": "category",
+            "name": "brand",
+            "displayName": "Brand",
             "kind": "Grouping"
         },
         {
-            "displayName": "Measure Data",
-            "name": "measure",
+            "name": "pack",
+            "displayName": "Pack",
+            "kind": "Grouping"
+        },
+        {
+            "name": "categoryType",
+            "displayName": "Category Type (e.g., SS mL, MS mL)",
+            "kind": "Grouping"
+        },
+        {
+            "name": "entry",
+            "displayName": "Entry Value",
             "kind": "Measure"
+        },
+        {
+            "name": "frequency",
+            "displayName": "Frequency Value",
+            "kind": "Measure"
+        },
+        {
+            "name": "upsize",
+            "displayName": "Upsize Value",
+            "kind": "Measure"
+        },
+        {
+            "name": "color",
+            "displayName": "Color",
+            "kind": "Grouping",
+            "description": "Optional: Define custom color for each row"
+        }
+    ],
+    "dataViewMappings": [
+        {
+            "table": {
+                "rows": {
+                   
+                    "for": {
+                        "in": "brand" 
+                    }
+                },
+                "columns": [
+                    {
+                        "for": { "in": "pack" },
+                        "bind": { "to": "pack" }
+                    },
+                    {
+                        "for": { "in": "categoryType" },
+                        "bind": { "to": "categoryType" }
+                    },
+                    {
+                        "for": { "in": "entry" },
+                        "bind": { "to": "entry" }
+                    },
+                    {
+                        "for": { "in": "frequency" },
+                        "bind": { "to": "frequency" }
+                    },
+                    {
+                        "for": { "in": "upsize" },
+                        "bind": { "to": "upsize" }
+                    },
+                    {
+                        "for": { "in": "color" },
+                        "bind": { "to": "color" }
+                    }
+                    ]
+            }
         }
     ],
     "objects": {
-        "dataPoint": {
+        "general": {
+            "displayName": "General",
             "properties": {
-                "defaultColor": {
-                    "type": {
-                        "fill": {
-                            "solid": {
-                                "color": true
-                            }
-                        }
-                    }
-                },
-                "showAllDataPoints": {
+                "responsive": {
                     "type": {
                         "bool": true
-                    }
-                },
-                "fill": {
-                    "type": {
-                        "fill": {
-                            "solid": {
-                                "color": true
-                            }
-                        }
-                    }
-                },
-                "fillRule": {
-                    "type": {
-                        "fill": {}
-                    }
-                },
-                 "fontSize": {
-                    "type": {
-                        "formatting": {
-                            "fontSize": true
-                        }
                     }
                 }
             }
         }
     },
-    "dataViewMappings": [
-        {
-            "categorical": {
-                "categories": {
-                    "for": {
-                        "in": "category"
-                    },
-                    "dataReductionAlgorithm": {
-                        "top": {}
-                    }
-                },
-                "values": {
-                    "select": [
-                        {
-                            "bind": {
-                                "to": "measure"
-                            }
-                        }
-                    ]
-                }
-            }
-        }
-    ],
     "privileges": []
 }
