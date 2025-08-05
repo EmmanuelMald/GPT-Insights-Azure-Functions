@@ -16,14 +16,14 @@ module.exports = async function (context, req) {
     let dataText = '';
     inputData.forEach(item => {
       // Ensure each item has the required fields
-      if (!item.chart_name || !item.chart_description || !item.data) {
-        throw new Error("Each dictionary in 'data' must contain 'chart_name', 'chart_description', and 'data' fields.");
+      if (!item.chart_name || !item.chart_description || !item.chart_data) {
+        throw new Error("Each dictionary in 'data' must contain 'chart_name', 'chart_description', and 'chart_data' fields.");
       }
       
       dataText += `
 Chart Name: ${item.chart_name}
 Chart Description: ${item.chart_description}
-Data: ${JSON.stringify(item.data, null, 2)}
+Chart Data: ${JSON.stringify(item.data, null, 2)}
 ---
 `;
     });
