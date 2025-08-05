@@ -6,7 +6,7 @@ const openai = new OpenAI({apiKey: process.env.OPENAI_API_KEY}); // Initialize O
 async function getChatCompletion(messages){
     try {
         const response = await openai.chat.completions.create({
-            model: "gpt-3.5-turbo", // Specify the model to use
+            model: "gpt-4", // Specify the model to use
             messages,
         });
         return response.choices[0].message.content; // Return the content of the first choice
