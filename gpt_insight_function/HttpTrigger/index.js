@@ -23,7 +23,7 @@ module.exports = async function (context, req) {
       dataText += `
 Chart Name: ${item.chart_name}
 Chart Description: ${item.chart_description}
-Chart Data: ${JSON.stringify(item.data, null, 2)}
+Chart Data: ${JSON.stringify(item.chart_data)}
 ---
 `;
     });
