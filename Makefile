@@ -1,8 +1,5 @@
 STORAGE_ACCOUNT_NAME='eamadormstorageaccount'
 STORAGE_CONTAINER_NAME='gpt-insight-container'
-JSON_PAYLOAD='{"data": [{"product": "Laptop", "sales": 150, "region": "North"}, \
-				  {"product": "Keyboard", "sales": 300, "region": "North"}, \
-				  {"product": "Mouse", "sales": 850, "region": "South"}]}'
 
 # login to azure
 az-login:
@@ -24,6 +21,7 @@ trigger-local-azure-function:
 
 zip-azure-function:
 	cd gpt_insight_function && \
+	rm gpt-insight-function.zip || true && \
 	zip -r gpt-insight-function.zip .
 
 upload-azure-function:
@@ -31,9 +29,5 @@ upload-azure-function:
 		--account-name ${STORAGE_ACCOUNT_NAME} \
 		--container-name ${STORAGE_CONTAINER_NAME} \
 		--file gpt_insight_function/gpt-insight-function.zip \
-		--auth-mode login
-
-trigger-online-azure-function:
-	curl -X POST https://gpt-insight-function-app.azurewebsites.net/api/HttpTrigger? \
-	-H "Content-Type: application/json" \
-	-d ${JSON_PAYLOAD}
+		--auth-mode login \
+		--overwrite
